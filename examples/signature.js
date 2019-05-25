@@ -2,7 +2,7 @@ const crypto = require('crypto')
 
 const KEY = '943b421c9eb07c830af81030552c86009268de4e532ba2ee2eab8247c6da0881'
 const SALT = '520f986b998545b4785e0defbc4f3c1203f22de2374a3d53cb7a7fe9fea309c5'
-const SIGNATURE_SIZE = 8
+const SIGNATURE_SIZE = 32 // should correspond to IMGPROXY_SIGNATURE_SIZE on the server. Default: 32
 
 const urlSafeBase64 = (string) => {
   return new Buffer(string).toString('base64').replace(/=/g, '').replace(/\+/g, '-').replace(/\//g, '_')
